@@ -4,7 +4,7 @@ pipeline {
         stage('Upload to AWS') {
             steps {
                 withAWS(credentials:'aws-static') { 
-                    s3Upload(file:'index.html', bucket:'joseudacityproject3', path:'/')
+                    s3Upload(file:'index.html', bucket:'joseudacityproject3', path:'')
                 }
                 sh 'echo "Hello World"'
                 sh '''
